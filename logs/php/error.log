@@ -1,1 +1,37 @@
 [15-Jan-2024 15:21:28 UTC] PHP Parse error:  syntax error, unexpected '}' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 6
+[15-Jan-2024 16:35:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function phpget_footer() in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php:111
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php(17): require('/Users/dylsonol...')
+#3 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 111
+[15-Jan-2024 16:35:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function phpget_footer() in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php:111
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php(17): require('/Users/dylsonol...')
+#3 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 111
+[15-Jan-2024 16:35:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function phpget_footer() in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php:111
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php(17): require('/Users/dylsonol...')
+#3 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 111
+[15-Jan-2024 16:35:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function phpget_footer() in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php:111
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php(17): require('/Users/dylsonol...')
+#3 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 111
+[15-Jan-2024 16:35:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function phpget_footer() in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php:111
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php(106): include()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php(19): require_once('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php(17): require('/Users/dylsonol...')
+#3 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 111
+[15-Jan-2024 16:39:47 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or ',' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 95
