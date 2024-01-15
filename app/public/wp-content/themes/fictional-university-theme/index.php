@@ -1,3 +1,4 @@
+<h1>This is the header</h1>
 <?php
 
 while (have_posts()) {
@@ -8,3 +9,5 @@ while (have_posts()) {
 <?php }
 
 ?>
+
+<h1>this is the footer</h1>
