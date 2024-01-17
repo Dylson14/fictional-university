@@ -140,4 +140,3 @@ to be displayed in our website -->
 <!-- ********************************************************* -->
 
 <?php get_footer(); ?>
-<h1>This is the Footer area</h1>
