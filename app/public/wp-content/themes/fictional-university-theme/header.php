@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 
-<head>
+  <head>
+    <meta charset="<?php bloginfo('charset'); ?>"> 
+    <!-- the meta tag below allows devices to use their native sizes -->
+    <meta name="viewport" content="width=device-width">
+    <!-- the wp_head(); func fires the w -->
     <?php wp_head(); ?>
-</head>
+  </head>
 
-<body>
-<header class="site-header">
+  <body <?php body_class(); ?>>
+    <header class="site-header">
       <div class="container">
         <h1 class="school-logo-text float-left">
           <a href="<?php echo site_url() ?>"><strong>Fictional</strong> University</a>

@@ -35,3 +35,24 @@ Stack trace:
 #3 {main}
   thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 111
 [15-Jan-2024 16:39:47 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' or ',' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/index.php on line 95
+[16-Jan-2024 09:43:59 UTC] PHP Parse error:  syntax error, unexpected '}' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 29
+[17-Jan-2024 09:14:09 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[17-Jan-2024 09:14:09 UTC] PHP Stack trace:
+[17-Jan-2024 09:14:09 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[17-Jan-2024 09:14:09 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[17-Jan-2024 09:14:09 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:13
+[17-Jan-2024 09:14:09 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[17-Jan-2024 09:14:09 UTC] PHP   5. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[17-Jan-2024 09:14:09 UTC] PHP   6. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[17-Jan-2024 09:14:09 UTC] PHP   7. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[17-Jan-2024 09:14:09 UTC] PHP   8. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[17-Jan-2024 09:14:10 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[17-Jan-2024 09:14:10 UTC] PHP Stack trace:
+[17-Jan-2024 09:14:10 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[17-Jan-2024 09:14:10 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[17-Jan-2024 09:14:10 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:13
+[17-Jan-2024 09:14:10 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[17-Jan-2024 09:14:10 UTC] PHP   5. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[17-Jan-2024 09:14:10 UTC] PHP   6. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[17-Jan-2024 09:14:10 UTC] PHP   7. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[17-Jan-2024 09:14:10 UTC] PHP   8. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348

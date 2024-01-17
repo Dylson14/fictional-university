@@ -1,5 +1,26 @@
 <?php get_header(); ?>
 
+<?php
+/* 
+    have_posts(), determines whether current Wordpress query has posts to loop over
+    GPT: it's a function used within the loop to check if there are any posts remaining 
+    in the current query
+*/
+while (have_posts()) {
+    /* the function the_post() checks whether the loop has started 
+       and then sets the current post by moving, each time, to the next
+       post in queue
+         */
+    the_post(); ?>
+    <!-- the_permalink() displays the permalink (the URL) for the current post, within the loop. It's the specific link to a specific page or post in your wordpress site -->
+    <br>
+    <br>
+    <br>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <p> <?php the_content(); ?> </p>
+    <hr>
+<?php };
+?>
 
 <div class="page-banner">
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>)"></div>
@@ -104,8 +125,5 @@
         <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
     </div>
 </div>
-
-
-
 
 <?php get_footer(); ?>
