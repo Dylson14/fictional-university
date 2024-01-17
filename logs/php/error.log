@@ -56,3 +56,9 @@ Stack trace:
 [17-Jan-2024 09:14:10 UTC] PHP   6. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
 [17-Jan-2024 09:14:10 UTC] PHP   7. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
 [17-Jan-2024 09:14:10 UTC] PHP   8. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[17-Jan-2024 10:08:01 UTC] PHP Warning:  Use of undefined constant hello - assumed 'hello' (this will throw an Error in a future version of PHP) in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 1
+[17-Jan-2024 10:08:01 UTC] PHP Stack trace:
+[17-Jan-2024 10:08:01 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[17-Jan-2024 10:08:01 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[17-Jan-2024 10:08:01 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[17-Jan-2024 10:08:01 UTC] PHP   4. include() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:106

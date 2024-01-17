@@ -1,3 +1,12 @@
+<!-- File Description:
+This file is really the meats of our website, 
+where the main content lives, it's the homepage.
+-->
+
+<!-- get_header(), Docs: Loads the header template, includes the header template
+for a theme or if a name is specified, then a specialized header will be included 
+GPT: used to retrieve and include the header template file in a theme, such template is usually found in the header.php file, and its purpose is to load the header section of a Wordpress theme.
+-->
 <?php get_header(); ?>
 
 <?php
@@ -15,13 +24,16 @@ while (have_posts()) {
     <!-- the_permalink() displays the permalink (the URL) for the current post, within the loop. It's the specific link to a specific page or post in your wordpress site -->
     <br>
     <br>
-    <br>
     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <p> <?php the_content(); ?> </p>
     <hr>
 <?php };
-?>
+?> 
 
+
+<!-- ********************************************************* -->
+<!-- beneath this comment is the "meat" of our website, the main content
+to be displayed in our website -->
 <div class="page-banner">
     <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>)"></div>
     <div class="page-banner__content container t-center c-white">
@@ -125,5 +137,7 @@ while (have_posts()) {
         <div class="slider__bullets glide__bullets" data-glide-el="controls[nav]"></div>
     </div>
 </div>
+<!-- ********************************************************* -->
 
 <?php get_footer(); ?>
+<h1>This is the Footer area</h1>

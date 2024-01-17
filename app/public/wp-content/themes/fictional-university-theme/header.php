@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<h1>Salutations from header.php!</h1>
+
+
+<!-- <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
   <head>
     <meta charset="<?php bloginfo('charset'); ?>"> 
-    <!-- the meta tag below allows devices to use their native sizes -->
+    THIS IS A COMMENT: the meta tag below allows devices to use their native sizes END OF COMMENT.
     <meta name="viewport" content="width=device-width">
-    <!-- the wp_head(); func fires the w -->
     <?php wp_head(); ?>
   </head>
 
@@ -34,4 +36,4 @@
           </div>
         </div>
       </div>
-    </header>
+    </header>  -->
