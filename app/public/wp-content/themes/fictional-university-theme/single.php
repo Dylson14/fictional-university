@@ -27,18 +27,3 @@ while (have_posts()) {
 /* get_footer() loads footer template, same thing as the get_header() */
 get_footer();
 ?>
-
-
-
-<!-- ********************************************************* -->
-<!-- This was the old version w/out any comments, I'll leave it here in case
-I need it back
-    <?php
-    get_header();
-    while (have_posts()) {
-        the_post(); ?>
-        <h2>  <?php the_title(); ?> </h2>
-        <?php the_content(); ?>
-    <?php }
-    get_footer();
-    ?> -->

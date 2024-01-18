@@ -17,7 +17,7 @@ function university_files(){
     wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/index.css'));
     /* For the font awesome, we are no longer pointing to a file, as such, we didn't use  get_theme_file_uri() func, instead just pointed to the URL directyl*/
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-    wp_enqueue_style('custom-google-fonts', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
 }
 
 /* add_action() explan: WP lets us give this function instructions and tell it 
