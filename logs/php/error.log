@@ -62,3 +62,100 @@ Stack trace:
 [17-Jan-2024 10:08:01 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
 [17-Jan-2024 10:08:01 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:19
 [17-Jan-2024 10:08:01 UTC] PHP   4. include() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:106
+[18-Jan-2024 10:01:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 31 and at least 2 expected in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:441
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php(31): add_action('after-')
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(611): include('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php(91): require_once('/Users/dylsonol...')
+#3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php(50): require_once('/Users/dylsonol...')
+#4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/dylsonol...')
+#5 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php on line 441
+[18-Jan-2024 10:03:38 UTC] PHP Parse error:  syntax error, unexpected 'add_action' (T_STRING), expecting '(' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 32
+[18-Jan-2024 10:05:39 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[18-Jan-2024 10:05:39 UTC] PHP Stack trace:
+[18-Jan-2024 10:05:39 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php:0
+[18-Jan-2024 10:05:39 UTC] PHP   2. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php:22
+[18-Jan-2024 10:05:39 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[18-Jan-2024 10:05:39 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[18-Jan-2024 10:05:39 UTC] PHP   5. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[18-Jan-2024 10:05:39 UTC] PHP   6. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:05:39 UTC] PHP   7. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:07:40 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[18-Jan-2024 10:07:40 UTC] PHP Stack trace:
+[18-Jan-2024 10:07:40 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php:0
+[18-Jan-2024 10:07:40 UTC] PHP   2. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php:22
+[18-Jan-2024 10:07:40 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[18-Jan-2024 10:07:40 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[18-Jan-2024 10:07:40 UTC] PHP   5. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[18-Jan-2024 10:07:40 UTC] PHP   6. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:07:40 UTC] PHP   7. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:07:40 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[18-Jan-2024 10:07:40 UTC] PHP Stack trace:
+[18-Jan-2024 10:07:40 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-cron.php:0
+[18-Jan-2024 10:07:40 UTC] PHP   2. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-cron.php:46
+[18-Jan-2024 10:07:40 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[18-Jan-2024 10:07:40 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[18-Jan-2024 10:07:40 UTC] PHP   5. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[18-Jan-2024 10:07:40 UTC] PHP   6. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:07:40 UTC] PHP   7. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:08:16 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[18-Jan-2024 10:08:16 UTC] PHP Stack trace:
+[18-Jan-2024 10:08:16 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[18-Jan-2024 10:08:16 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[18-Jan-2024 10:08:16 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:13
+[18-Jan-2024 10:08:16 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[18-Jan-2024 10:08:16 UTC] PHP   5. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[18-Jan-2024 10:08:16 UTC] PHP   6. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[18-Jan-2024 10:08:16 UTC] PHP   7. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:08:16 UTC] PHP   8. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:08:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'university_features' not found or invalid function name in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php on line 324
+[18-Jan-2024 10:08:17 UTC] PHP Stack trace:
+[18-Jan-2024 10:08:17 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[18-Jan-2024 10:08:17 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[18-Jan-2024 10:08:17 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:13
+[18-Jan-2024 10:08:17 UTC] PHP   4. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php:50
+[18-Jan-2024 10:08:17 UTC] PHP   5. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php:91
+[18-Jan-2024 10:08:17 UTC] PHP   6. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php:621
+[18-Jan-2024 10:08:17 UTC] PHP   7. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:08:17 UTC] PHP   8. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:08:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:324) in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/pluggable.php on line 1435
+[18-Jan-2024 10:08:17 UTC] PHP Stack trace:
+[18-Jan-2024 10:08:17 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[18-Jan-2024 10:08:17 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[18-Jan-2024 10:08:17 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[18-Jan-2024 10:08:17 UTC] PHP   4. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:45
+[18-Jan-2024 10:08:17 UTC] PHP   5. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:08:17 UTC] PHP   6. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:08:17 UTC] PHP   7. do_favicon() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:324
+[18-Jan-2024 10:08:17 UTC] PHP   8. wp_redirect() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/functions.php:1741
+[18-Jan-2024 10:08:17 UTC] PHP   9. header() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/pluggable.php:1435
+[18-Jan-2024 10:08:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:324) in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/pluggable.php on line 1438
+[18-Jan-2024 10:08:17 UTC] PHP Stack trace:
+[18-Jan-2024 10:08:17 UTC] PHP   1. {main}() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:0
+[18-Jan-2024 10:08:17 UTC] PHP   2. require() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/index.php:17
+[18-Jan-2024 10:08:17 UTC] PHP   3. require_once() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-blog-header.php:19
+[18-Jan-2024 10:08:17 UTC] PHP   4. do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/template-loader.php:45
+[18-Jan-2024 10:08:17 UTC] PHP   5. WP_Hook->do_action() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:517
+[18-Jan-2024 10:08:17 UTC] PHP   6. WP_Hook->apply_filters() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:348
+[18-Jan-2024 10:08:17 UTC] PHP   7. do_favicon() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php:324
+[18-Jan-2024 10:08:17 UTC] PHP   8. wp_redirect() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/functions.php:1741
+[18-Jan-2024 10:08:17 UTC] PHP   9. header() /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/pluggable.php:1438
+[18-Jan-2024 10:51:41 UTC] PHP Parse error:  syntax error, unexpected ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 65
+[18-Jan-2024 12:14:51 UTC] WordPress database error Server shutdown in progress for query UPDATE `wp_options` SET `option_value` = 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-6.4.2.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-6.4.2.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-6.4.2-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-6.4.2-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"6.4.2\";s:7:\"version\";s:5:\"6.4.2\";s:11:\"php_version\";s:5:\"7.0.0\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"6.4\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1705580091;s:15:\"version_checked\";s:5:\"6.4.2\";s:12:\"translations\";a:0:{}}', `autoload` = 'no' WHERE `option_name` = '_site_transient_update_core' made by include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php'), include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->run_command_and_exit, WP_CLI\Runner->run_command, WP_CLI\Dispatcher\Subcommand->invoke, call_user_func, WP_CLI\Dispatcher\CommandFactory::WP_CLI\Dispatcher\{closure}, call_user_func, Core_Command->check_update, Core_Command->get_updates, wp_version_check, set_site_transient, update_site_option, update_network_option, update_option
+[18-Jan-2024 12:43:56 UTC] PHP Parse error:  syntax error, unexpected ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 90
+[18-Jan-2024 12:45:49 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 89
+[18-Jan-2024 13:30:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 0 passed in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 32 and exactly 2 expected in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php:136
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php(32): register_nav_menu()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_features('')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(621): do_action('after_setup_t in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php on line 136
+[18-Jan-2024 13:30:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 0 passed in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 33 and exactly 2 expected in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php:136
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php(33): register_nav_menu()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_features('')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(621): do_action('after_setup_t in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php on line 136
