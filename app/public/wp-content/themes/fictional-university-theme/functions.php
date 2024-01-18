@@ -1,8 +1,8 @@
-<!-- All the other files are called template files, 
+<?php 
+/* <!-- All the other files are called template files, 
 they control the HTML that the public will see.
 This file is more private, our behind-the-scenes file. 
-This is where we can have a conversation with the Wordpress system itself-->
-<?php 
+This is where we can have a conversation with the Wordpress system itself--> */
 
 function university_files(){
     /* we bring in JS files with wp_enqueue_script() func, takes 5 args, 1st is the nickname which can be anything, 2nd is the path of the JS file. We use get_theme_file_uri() to point to specific file location. When loading JS, it takes more args than a CSS file. In the 3rd arg, WP wants to know of any file dependencies, an example of a dependency is jquery, if there is no dependencies just place NULL and the 4th arg is the version number, the last arg is WP asking us if we want to load the file right before the closing body tag, which you can say true for yes and false for no. */
