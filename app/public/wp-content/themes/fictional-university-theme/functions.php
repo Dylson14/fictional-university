@@ -39,4 +39,7 @@ function university_features() {
 }
 /*  We need to tell WP to generate an appropriate title tag for each screen, after_setup_theme, this hook fires after the theme is loaded, used to perform basic set up, registration and init actions for a theme  */
 add_action('after_setup_theme', 'university_features');
+
+
+
 ?>
