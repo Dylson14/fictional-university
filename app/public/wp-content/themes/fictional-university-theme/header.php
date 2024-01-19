@@ -28,7 +28,7 @@
                <!-- you don't want your links to just point to the root of the current domain, as in, your URL may change many times, the core root of your URL may change, it may not always be "fictional-university.local", but can change, a more reliable way to get your links working independent of what the core URL is, is to use site_url('<page url here>')  -->
               <li <?php if (is_page('about-us') or wp_get_post_parent_id(0) == 12) echo 'class="current-menu-item"' ?> ><a href="<?php echo site_url('/about-us'); ?>">About Us</a></li>
               <li><a href="#">Programs</a></li>
-              <li><a href="#">Events</a></li>
+              <li <?php if(get_post_type() == 'event') echo 'class = "current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>
               <li><a href="#">Campuses</a></li>
               <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"' ?> ><a href="<?php echo site_url('/blog') ?>">Blog</a></li>
             </ul> 

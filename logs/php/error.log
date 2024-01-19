@@ -159,3 +159,4 @@ Stack trace:
 #2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
 #3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
 #4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(621): do_action('after_setup_t in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php on line 136
+[19-Jan-2024 09:02:50 UTC] PHP Parse error:  syntax error, unexpected ''rewrite'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/mu-plugins/university-post-types.php on line 6
