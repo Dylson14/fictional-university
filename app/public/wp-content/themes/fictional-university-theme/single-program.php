@@ -39,6 +39,37 @@ while (have_posts()) {
                 <?php the_content(); ?>
             </div>
             <?php
+            $relatedProfessors = new WP_Query(array(
+                'posts_per_page' => -1,
+                'post_type' => 'professor',
+                'orderby' => 'title',
+                'order' => 'ASC',
+                'meta_query' => array(
+                    array(
+                        'key' => 'related_programs',
+                        'compare' => 'LIKE',
+                        'value' => '"' . get_the_ID() . '"'
+                    )
+                )
+            ));
+
+            if ($relatedProfessors->have_posts()) {
+                echo '<hr class="section-break">';
+                echo '<h2 class="headline headline--medium">' . get_the_title() . ' Professors</h2>';
+
+                while ($relatedProfessors->have_posts()) {
+                    $relatedProfessors->the_post(); ?>
+                    <li class="professor-card__list-item">
+                        <a class="professor-card" href="<?php the_permalink(); ?>">
+                            <img class="professor-card__image" src="" alt="">
+                            <span class="professor-card__name"></span>
+                        </a>
+                    </li>
+                <?php }
+            }
+
+            wp_reset_postdata();
+
             $today = date('Ymd');
             $homepageEvents = new WP_Query(array(
                 'posts_per_page' => 2,
@@ -63,40 +94,40 @@ while (have_posts()) {
 
             if ($homepageEvents->have_posts()) {
                 echo '<hr class="section-break">';
-            echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Events</h2>';
+                echo '<h2 class="headline headline--medium">Upcoming ' . get_the_title() . ' Professors</h2>';
 
-            while ($homepageEvents->have_posts()) {
-                $homepageEvents->the_post(); ?>
-                <div class="event-summary">
-                    <a class="event-summary__date t-center" href="#">
-                        <span class="event-summary__month">
-                            <?php
-                            /* get_field() is a custom func from the ACF plugin, the error appears because it does not have the file access to the ACF plugin, 
+                while ($homepageEvents->have_posts()) {
+                    $homepageEvents->the_post(); ?>
+                    <div class="event-summary">
+                        <a class="event-summary__date t-center" href="#">
+                            <span class="event-summary__month">
+                                <?php
+                                /* get_field() is a custom func from the ACF plugin, the error appears because it does not have the file access to the ACF plugin, 
                         but it works as intended */
-                            $eventDate = new DateTime(get_field('event_date'));
-                            echo $eventDate->format('M');
-                            ?>
-                        </span>
-                        <span class="event-summary__day">
-                            <?php
-                            $eventDate = new DateTime(get_field('event_date'));
-                            echo $eventDate->format('d');
-                            ?>
-                        </span>
-                    </a>
-                    <div class="event-summary__content">
-                        <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                        <p> <?php if (has_excerpt()) {
-                                echo get_the_excerpt();
-                            } else {
-                                echo wp_trim_words(get_the_content(), 18);
-                            }
-                            ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
+                                $eventDate = new DateTime(get_field('event_date'));
+                                echo $eventDate->format('M');
+                                ?>
+                            </span>
+                            <span class="event-summary__day">
+                                <?php
+                                $eventDate = new DateTime(get_field('event_date'));
+                                echo $eventDate->format('d');
+                                ?>
+                            </span>
+                        </a>
+                        <div class="event-summary__content">
+                            <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                            <p> <?php if (has_excerpt()) {
+                                    echo get_the_excerpt();
+                                } else {
+                                    echo wp_trim_words(get_the_content(), 18);
+                                }
+                                ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
+                        </div>
                     </div>
-                </div>
             <?php }
             }
-            
+
             ?>
         </div>
 
