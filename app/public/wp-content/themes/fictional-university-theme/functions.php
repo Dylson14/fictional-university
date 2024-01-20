@@ -1,10 +1,11 @@
-<?php 
+<?php
 /* <!-- All the other files are called template files, 
 they control the HTML that the public will see.
 This file is more private, our behind-the-scenes file. 
 This is where we can have a conversation with the Wordpress system itself--> */
 
-function university_files(){
+function university_files()
+{
     /* we bring in JS files with wp_enqueue_script() func, takes 5 args, 1st is the nickname which can be anything, 2nd is the path of the JS file. We use get_theme_file_uri() to point to specific file location. When loading JS, it takes more args than a CSS file. In the 3rd arg, WP wants to know of any file dependencies, an example of a dependency is jquery, if there is no dependencies just place NULL and the 4th arg is the version number, the last arg is WP asking us if we want to load the file right before the closing body tag, which you can say true for yes and false for no. */
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     /* in this func, we can load as many CSS or JS files we wish. To do so we'll need to call on a WP func. wp_enqueue_ style()*/
@@ -26,9 +27,10 @@ function university_files(){
 what to do with the add_action() func, it takes 2 arguments, The 1st argument is where we tell WP what type of instructions we are giving it, depeneding on what we are trying to do WP will run it at different times */
 /* wp_enqueue_scripts, this special WP hook is used to load a file. Telling WP we want to load some CSS or JS files.  */
 /* the 2nd arg. is giving WP the name of a func we want to run. The name can be anything we wish. You'll then need to create this function with the exact name, as you can see above^ */
-add_action('wp_enqueue_scripts','university_files');
+add_action('wp_enqueue_scripts', 'university_files');
 
-function university_features() {
+function university_features()
+{
     /* register_nav_menu(), allows us to enable a menu option*/
     /* register_nav_menu('headerMenuLocation', 'Header Menu Location');
     register_nav_menu('footerLocationOne', 'Footer Location One');
@@ -40,6 +42,29 @@ function university_features() {
 /*  We need to tell WP to generate an appropriate title tag for each screen, after_setup_theme, this hook fires after the theme is loaded, used to perform basic set up, registration and init actions for a theme  */
 add_action('after_setup_theme', 'university_features');
 
+function university_adjust_queries($query)
+{
+    /* checks if user is in the front-end */
+    if(!is_admin() && is_post_type_archive('program') && $query->is_main_query()){
+        $query->set('orderby', 'title');
+        $query->set('order', 'ASC');
+        $query->set('posts_per_page', -1);
+    }
 
+    if (!is_admin() && is_post_type_archive('event') && $query->is_main_query()) {
+        $today = date('Ymd');
+        $query->set('meta_key', 'event_date');
+        $query->set('orderby', 'meta_value_num');
+        $query->set('order', 'ASC');
+        $query->set('meta_query', array(
+            array(
+                'key' => 'event_date',
+                'compare' => '>=',
+                'value' => $today,
+                'type' => 'numeric'
+            )
+        ));
+    };
+};
 
-?>
+add_action('pre_get_posts', 'university_adjust_queries');

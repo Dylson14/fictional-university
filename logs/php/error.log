@@ -160,3 +160,35 @@ Stack trace:
 #3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
 #4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(621): do_action('after_setup_t in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/nav-menu.php on line 136
 [19-Jan-2024 09:02:50 UTC] PHP Parse error:  syntax error, unexpected ''rewrite'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/mu-plugins/university-post-types.php on line 6
+[19-Jan-2024 10:43:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_action(), 0 passed in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 45 and at least 2 expected in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:441
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php(45): add_action()
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(611): include('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php(91): require_once('/Users/dylsonol...')
+#3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php(50): require_once('/Users/dylsonol...')
+#4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/dylsonol...')
+#5 {main}
+  thrown in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php on line 441
+[19-Jan-2024 10:45:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_action(), 1 passed in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 45 and at least 2 expected in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php:441
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php(45): add_action('pre_get_posts')
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-settings.php(611): include('/Users/dylsonol...')
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-config.php(91): require_once('/Users/dylsonol...')
+#3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-load.php(50): require_once('/Users/dylsonol...')
+#4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/dylsonol...')
+#5 {main}
+  in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php on line 441
+[19-Jan-2024 13:28:31 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page-past-events.php on line 61
+[19-Jan-2024 13:28:32 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page-past-events.php on line 61
+[19-Jan-2024 13:29:58 UTC] PHP Parse error:  syntax error, unexpected ''posts_per_page'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page-past-events.php on line 23
+[20-Jan-2024 08:54:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function isadmin() in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php:48
+Stack trace:
+#0 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(324): university_adjust_queries(Object(WP_Query))
+#1 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#3 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-query.php(1881): do_action_ref_array('pre_get_posts', Array)
+#4 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/class-wp-query.php(3824): WP_Query->get_posts()
+#5 /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-includes/post.php(2452): WP_Query->query(Array)
+#6 /Users/dylso in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 48
+[20-Jan-2024 09:43:50 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or ',' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-event.php on line 46
+[20-Jan-2024 10:10:45 UTC] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE), expecting ';' or ',' in /Users/dylsonoliveira/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single-program.php on line 66
