@@ -52,8 +52,8 @@ GPT: used to retrieve and include the header template file in a theme, such temp
        See here: https://developer.wordpress.org/reference/functions/the_post/#comment-4927
     */
     the_post(); 
-    
-    pageBanner()
+
+    pageBanner();
     ?>
     
   <div class="container container--narrow page-section">

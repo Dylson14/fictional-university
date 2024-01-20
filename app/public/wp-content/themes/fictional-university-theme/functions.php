@@ -3,19 +3,34 @@
 they control the HTML that the public will see.
 This file is more private, our behind-the-scenes file. 
 This is where we can have a conversation with the Wordpress system itself--> */
-function pageBanner()
+function pageBanner($args = NULL)
 {
-    //php logic will live here
+
+    if (!isset($args['title'])) {
+        $args['title'] = get_the_title();
+    }
+
+    if (!isset($args['subtitle'])) {
+        $args['subtitle'] = get_field('page_banner_subtitle');
+    }
+
+    if (!isset($args['photo'])) {
+        if (get_field('page_banner_background_image') && !is_archive() && !is_home()) {
+            $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
+        } else {
+            $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
+        }
+    }
+
 ?>
     <div class="page-banner">
         <div class="page-banner__bg-image" style="background-image: url(
-            <?php $pageBannerImage = get_field('page_banner_background_image');
-            echo $pageBannerImage['sizes']['pageBanner']; ?>)">
+            <?php echo $args['photo']; ?>)">
         </div>
         <div class="page-banner__content container container--narrow">
-            <h1 class="page-banner__title"> <?php the_title(); ?> </h1>
+            <h1 class="page-banner__title"> <?php echo $args['title'] ?> </h1>
             <div class="page-banner__intro">
-                <p><?php the_field('page_banner_subtitle'); ?></p>
+                <p><?php echo $args['subtitle']; ?></p>
             </div>
         </div>
     </div>
@@ -25,6 +40,7 @@ function pageBanner()
 function university_files()
 {
     /* we bring in JS files with wp_enqueue_script() func, takes 5 args, 1st is the nickname which can be anything, 2nd is the path of the JS file. We use get_theme_file_uri() to point to specific file location. When loading JS, it takes more args than a CSS file. In the 3rd arg, WP wants to know of any file dependencies, an example of a dependency is jquery, if there is no dependencies just place NULL and the 4th arg is the version number, the last arg is WP asking us if we want to load the file right before the closing body tag, which you can say true for yes and false for no. */
+    wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     /* in this func, we can load as many CSS or JS files we wish. To do so we'll need to call on a WP func. wp_enqueue_ style()*/
     /* for  wp_enqueue_ style('a','b); in the parentheses it takes 2 arguments, first is a nickname for the file. and the 2nd arg is the location that points to the file*/
@@ -90,3 +106,14 @@ function university_adjust_queries($query)
 };
 
 add_action('pre_get_posts', 'university_adjust_queries');
+
+function universityMapKey($api){
+$api['key'] = 'AIzaSyDng4fQFtPwe-m_9a7VpQES86feM0KfnQg';
+return $api;
+};
+
+add_filter('acf/fields/google_map/api', 'universityMapKey');
+
+/*
+the API key for google maps:
+AIzaSyDng4fQFtPwe-m_9a7VpQES86feM0KfnQg */
