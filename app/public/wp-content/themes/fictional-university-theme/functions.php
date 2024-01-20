@@ -38,6 +38,7 @@ function university_features()
     /* when you want to enable a feature for your theme, this is the func that you call: 
         add_theme_support(), the feature we are interested in is the title_tag */
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
 }
 /*  We need to tell WP to generate an appropriate title tag for each screen, after_setup_theme, this hook fires after the theme is loaded, used to perform basic set up, registration and init actions for a theme  */
 add_action('after_setup_theme', 'university_features');
