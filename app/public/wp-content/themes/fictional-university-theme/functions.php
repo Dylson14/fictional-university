@@ -3,6 +3,24 @@
 they control the HTML that the public will see.
 This file is more private, our behind-the-scenes file. 
 This is where we can have a conversation with the Wordpress system itself--> */
+function pageBanner()
+{
+    //php logic will live here
+?>
+    <div class="page-banner">
+        <div class="page-banner__bg-image" style="background-image: url(
+            <?php $pageBannerImage = get_field('page_banner_background_image');
+            echo $pageBannerImage['sizes']['pageBanner']; ?>)">
+        </div>
+        <div class="page-banner__content container container--narrow">
+            <h1 class="page-banner__title"> <?php the_title(); ?> </h1>
+            <div class="page-banner__intro">
+                <p><?php the_field('page_banner_subtitle'); ?></p>
+            </div>
+        </div>
+    </div>
+
+<?php }
 
 function university_files()
 {
@@ -39,6 +57,9 @@ function university_features()
         add_theme_support(), the feature we are interested in is the title_tag */
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    add_image_size('professorLandscape', 400, 260, true);
+    add_image_size('professorPortrait', 480, 650, true);
+    add_image_size('pageBanner', 1500, 350, true);
 }
 /*  We need to tell WP to generate an appropriate title tag for each screen, after_setup_theme, this hook fires after the theme is loaded, used to perform basic set up, registration and init actions for a theme  */
 add_action('after_setup_theme', 'university_features');
@@ -46,7 +67,7 @@ add_action('after_setup_theme', 'university_features');
 function university_adjust_queries($query)
 {
     /* checks if user is in the front-end */
-    if(!is_admin() && is_post_type_archive('program') && $query->is_main_query()){
+    if (!is_admin() && is_post_type_archive('program') && $query->is_main_query()) {
         $query->set('orderby', 'title');
         $query->set('order', 'ASC');
         $query->set('posts_per_page', -1);
