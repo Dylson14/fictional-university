@@ -63,6 +63,17 @@
 
 <!-- before the closing body tag we call wp_footer() func, this is to load the JS files right before the closing body tag at the bottom of our file. It gives WP the final say before we close out the body tag. 
     WP can use this for all sorts of things, like loading JS files or adding the admin menu bar -->
+
+    <div class="search-overlay search-overlay--active">
+      <div class="search-overlay__top">
+        <div class="container">
+        <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>  
+        <input type="text" class="search-term" placeholder="what are you looking for?" id="search-term">
+        <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i> 
+        </div>
+      </div>
+    </div>
+
     <?php wp_footer(); ?>
   </body>
 

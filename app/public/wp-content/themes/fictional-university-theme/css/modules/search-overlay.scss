@@ -45,6 +45,7 @@
   }
 
   &--active {
+    font-size: 2rem; /* <--- This is the where I added the font-size */
     visibility: visible;
     opacity: 1;
     transform: scale(1);

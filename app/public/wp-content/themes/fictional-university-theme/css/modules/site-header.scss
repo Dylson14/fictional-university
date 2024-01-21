@@ -83,7 +83,7 @@
     }
 
     @include atMedium {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -98,6 +98,7 @@
 
   &__btn {
     margin-right: 20px;
+
     @include atMedium {
       float: left;
     }
