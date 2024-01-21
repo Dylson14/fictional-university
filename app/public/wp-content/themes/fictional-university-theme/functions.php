@@ -40,7 +40,7 @@ function pageBanner($args = NULL)
 function university_files()
 {
     /* we bring in JS files with wp_enqueue_script() func, takes 5 args, 1st is the nickname which can be anything, 2nd is the path of the JS file. We use get_theme_file_uri() to point to specific file location. When loading JS, it takes more args than a CSS file. In the 3rd arg, WP wants to know of any file dependencies, an example of a dependency is jquery, if there is no dependencies just place NULL and the 4th arg is the version number, the last arg is WP asking us if we want to load the file right before the closing body tag, which you can say true for yes and false for no. */
-    wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
+    wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyDng4fQFtPwe-m_9a7VpQES86feM0KfnQg', NULL, '1.0', true);
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     /* in this func, we can load as many CSS or JS files we wish. To do so we'll need to call on a WP func. wp_enqueue_ style()*/
     /* for  wp_enqueue_ style('a','b); in the parentheses it takes 2 arguments, first is a nickname for the file. and the 2nd arg is the location that points to the file*/
