@@ -13,21 +13,21 @@
             <div class="site-footer__col-two">
               <h3 class="headline headline--small">Explore</h3>
               <nav class="nav-list">
-                 <ul>
+                <ul>
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Programs</a></li>
                   <li><a href="#">Events</a></li>
                   <li><a href="#">Campuses</a></li>
-                </ul> 
+                </ul>
               </nav>
             </div>
 
             <div class="site-footer__col-three">
               <h3 class="headline headline--small">Learn</h3>
               <nav class="nav-list">
-                 <ul>
+                <ul>
                   <li><a href="#">Legal</a></li>
-                   <!-- site_url() explan: Retrieves the URL for the current site. Works even when core URL may change, just focuses on the trailing endpoints -->  
+                  <!-- site_url() explan: Retrieves the URL for the current site. Works even when core URL may change, just focuses on the trailing endpoints -->
                   <li><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy</a></li>
                   <li><a href="#">Careers</a></li>
                 </ul>
@@ -61,20 +61,21 @@
       </div>
     </footer>
 
-<!-- before the closing body tag we call wp_footer() func, this is to load the JS files right before the closing body tag at the bottom of our file. It gives WP the final say before we close out the body tag. 
+    <!-- before the closing body tag we call wp_footer() func, this is to load the JS files right before the closing body tag at the bottom of our file. It gives WP the final say before we close out the body tag. 
     WP can use this for all sorts of things, like loading JS files or adding the admin menu bar -->
 
-    <div class="search-overlay search-overlay--active">
+    <div class="search-overlay">
       <div class="search-overlay__top">
         <div class="container">
-        <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>  
-        <input type="text" class="search-term" placeholder="what are you looking for?" id="search-term">
-        <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i> 
+          <i class="fa fa-search search-overlay__icon" aria-hidden="true"></i>
+          <input type="text" class="search-term" placeholder="what are you looking for?" id="search-term" autocomplete="off">
+          <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>
         </div>
       </div>
     </div>
 
-    <?php wp_footer(); ?>
-  </body>
 
-</html>
+    <?php wp_footer(); ?>
+    </body>
+
+    </html>
